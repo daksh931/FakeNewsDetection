@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+
+{% block content%}
+
+<form class="form fform" method="POST">
+
+    <div class="table1" col-lg-8>
+        <div class="mx-auto">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        {% for r in tables.columns %}
+                        <th>{{ r}}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for j in tables.index %}
+                    <tr>
+
+                        {% for r in tables.loc[j] %}
+                        <td>{{ r }}</td>
+                        {% endfor %}
+
+                    </tr>
+                    {% endfor %}
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+</form>
+
+{% endblock %}

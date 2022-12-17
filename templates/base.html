@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Meyawo landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Meyawo Landing page | Free Bootstrap 4.3.x landing page</title>
+    <!-- font icons -->
+
+    <link rel="stylesheet" type="text/css"
+        href="{{ url_for('static',filename='vendors/themify-icons/css/themify-icons.css') }}">
+    <!-- Bootstrap + Meyawo main styles -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/meyawo.css') }}">
+</head>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/form">Fake News</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/dataset">Data Set</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/model">Model</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact Us</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/about"> About Us</a>
+        </li>
+
+      </ul>
+      <button type="button" class="btn btn-primary mr-2" data-toggle="modal" data-target="#loginModal">
+        Login
+      </button>
+      <button type="button" class="btn btn-danger mr-2" data-toggle="modal" data-target="#signupModal">
+        SignUp
+      </button>
+    </div>
+  </nav>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+   
+
+    <!-- page header -->
+    <header id="home" class="header">
+        <div class="overlay"></div>
+        <div class="header-content container">
+            <h1 class="header-title">
+                <span class="up">HI!</span>
+                <span class="down">Live Analysis</span>
+            </h1>
+            <p class="header-subtitle">Fake News Detection</p>
+
+            <button class="btn btn-primary">Visit My Works</button>
+        </div>
+    </header><!-- end of page header -->
+
+    {% block content%}
+
+    {% endblock %}
+    </body>
+</html>
